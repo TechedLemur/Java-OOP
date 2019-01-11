@@ -5,11 +5,11 @@ public class Location {
 	int y;
 	
 	public void up() {
-		y++;
+		y--;
 	}
 
 	public void down() {
-		y--;
+		y++;
 	}
 	
 	public void left() {

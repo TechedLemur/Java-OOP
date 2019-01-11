@@ -45,9 +45,9 @@ public class Digit {
 		
 	}
 	public static void main(String[] args) {
-		Digit d1 = new Digit(16);
-		Digit d2 = new Digit(16);
-		Digit d3 = new Digit(16);
+		Digit d1 = new Digit(12);
+		Digit d2 = new Digit(12);
+		Digit d3 = new Digit(12);
 		//System.out.println(d1.toString()+d2.toString()+d3.toString());
 		for (int i = 0; i < d1.getBase(); i++) {
 			for (int j = 0; j < d1.getBase(); j++) {

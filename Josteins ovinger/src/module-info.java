@@ -5,5 +5,7 @@
  * @author joste
  *
  */
-module øvinger {
+module JosteinsOvinger {
+	
 }
+
