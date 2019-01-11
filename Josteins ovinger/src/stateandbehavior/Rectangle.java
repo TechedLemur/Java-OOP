@@ -1,17 +1,17 @@
 package stateandbehavior;
 
 public class Rectangle {
-	int minX; 
-	int minY; 
-	int maxX; 
-	int maxY; 
-	int height = maxY - minY; 
-	int width = maxX - minX;
+	private int minX; 
+	private int minY; 
+	private int maxX; 
+	private int maxY; 
+	private int height = maxY - minY; 
+	private int width = maxX - minX;
 	public Rectangle() {
-		int minX = 0; 
-		int minY = 0; 
-		int maxX = 0; 
-		int maxY = 0; 
+		this.minX = 0; 
+		this.minY = 0; 
+		this.maxX = 0; 
+		this.maxY = 0; 
 		this.height = maxY - minY; 
 		this.width = maxX - minX;
 		
@@ -125,12 +125,18 @@ public class Rectangle {
 			return this;
 		}
 		else {
-			return new Rectangle(Math.min(this.minX, rect.getMinX()), Math.min(this.minY, rect.getMinY()), Math.max(this.maxX, rect.getMaxX()), Math.max(this.maxY, rect.getMaxY()));
+			return new Rectangle(
+					Math.min(this.minX, rect.getMinX()), 
+					Math.min(this.minY, rect.getMinY()), 
+					Math.max(this.maxX, rect.getMaxX()), 
+					Math.max(this.maxY, rect.getMaxY()));
 		}
 	}
 	
 	public String toString() {
-		return "Rectangle: Width = " + width + ", Height = " + height + " Nederste venstre hjørne: (" + minX + ", " + minY + "), Øverste høyre hjørne: (" + maxX + ", " + maxY + ") ";
+		return "Rectangle: Width = " + width + ", Height = " + height 
+				+" Nederste venstre hjørne: (" + minX + ", " + minY 
+				+ "), Øverste høyre hjørne: (" + maxX + ", " + maxY + ") ";
 	}
 
 
@@ -153,8 +159,7 @@ public class Rectangle {
 		r4.add(r2);
 		Rectangle r5 = r3.union(r4);
 		System.out.println(r5);
-		
-
+		System.out.println(r5.contains(1, 2));
 	}
 
 }

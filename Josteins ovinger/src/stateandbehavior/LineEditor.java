@@ -1,9 +1,11 @@
 package stateandbehavior;
 
+
+
 public class LineEditor {
 	
-	String text = "";
-	int insertionIndex;
+	private String text = "";
+	private int insertionIndex;
 	
 	
 	public String getText() {
@@ -70,8 +72,27 @@ public class LineEditor {
 		return text.substring(0, insertionIndex) + "|" + text.substring(insertionIndex);
 	}
 	
+	public void insert(Object o) {
+		String n = o.toString();
+		this.insertString(n);
+	}
+	
+	public void left(int n) {
+		for (int i = 0; i < n; i++) {
+			this.left();
+		}
+	}
+	public void right(int n) {
+		for (int i = 0; i < n; i++) {
+			this.right();
+		}
+	}	
+	
+	
+	
 	public static void main(String[] args) {
 		LineEditor l1 = new LineEditor();
+		System.out.println(l1);
 		l1.insertString("Hei");
 		System.out.println(l1);
 		l1.right();
@@ -88,8 +109,9 @@ public class LineEditor {
 		System.out.println(l1);
 		l1.insertString("Hoe");
 		System.out.println(l1);
-		
-
-	}
-
+		l1.left(3);
+		System.out.println(l1);
+		l1.right(8);
+		System.out.println(l1);
+		}
 }
