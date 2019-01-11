@@ -5,8 +5,8 @@ public class Rectangle {
 	private int minY; 
 	private int maxX; 
 	private int maxY; 
-	private int height = maxY - minY; 
-	private int width = maxX - minX;
+	private int height; 
+	private int width;
 	public Rectangle() {
 		this.minX = 0; 
 		this.minY = 0; 
