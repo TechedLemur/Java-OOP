@@ -67,7 +67,7 @@ public class LineEditor {
 		}
 		
 	}
-	
+	@Override
 	public String toString() {
 		return text.substring(0, insertionIndex) + "|" + text.substring(insertionIndex);
 	}
