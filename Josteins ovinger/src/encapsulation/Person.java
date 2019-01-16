@@ -100,6 +100,7 @@ public class Person {
 
 
 	public void setBirthday(Date birthday) {
+		
 		this.birthday = birthday;
 	}
 
@@ -108,7 +109,7 @@ public class Person {
 
 
 
-	public char getGender() {
+	public char getGender() { //må vere m / f / null
 		return gender;
 	}
 
