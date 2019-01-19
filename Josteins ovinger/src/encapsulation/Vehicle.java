@@ -223,6 +223,10 @@ public class Vehicle {
 			throw new IllegalArgumentException("Noe er galt");
 		}
 	}
+	
+	public String toString(){
+		return "Vehicle type: " + vehicleType + ", Fueltype: " + fuelType + ", Registrationnumber: " + registrationNumber;
+	}
 
 
 	public String getRegistrationNumber() {
@@ -248,6 +252,7 @@ public class Vehicle {
 	public static void main(String[] args) {
 		Vehicle v1 = new Vehicle('C', 'E', "EL21456");
 		Vehicle v2 = new Vehicle('M', 'E', "EL2146");
+		System.out.println(v1);
 	}
 
 }
