@@ -25,6 +25,7 @@ public class Person {
 	}
 	
 	
+	
 		
 	public String getName() {
 		return name;
@@ -100,8 +101,13 @@ public class Person {
 
 
 	public void setBirthday(Date birthday) {
-		
-		this.birthday = birthday;
+		Date current_date = new Date();
+		if (birthday.after(current_date)) {
+			throw new IllegalArgumentException("Kan ikke ha bursdag frem i tid :(");	
+		}
+		else {
+			this.birthday = birthday;	
+		}
 	}
 
 
@@ -109,7 +115,7 @@ public class Person {
 
 
 
-	public char getGender() { //må vere m / f / null
+	public char getGender() {
 		return gender;
 	}
 
@@ -119,7 +125,13 @@ public class Person {
 
 
 	public void setGender(char gender) {
-		this.gender = gender;
+		if (!(gender == 'M' || gender == 'F' || gender == '\0')) {
+			throw new IllegalArgumentException("Det finnes bare to kjÃ¸nn");
+		}
+		else {
+			this.gender = gender;
+		}
+		
 	}
 
 
@@ -133,6 +145,8 @@ public class Person {
 		System.out.println(p1.getName());
 		p1.setEmail("jostein.tysse@gmail.no");
 		System.out.println(p1.getEmail());
+		Date d1 = new Date();
+		System.out.println(d1);
 
 	}
 	
