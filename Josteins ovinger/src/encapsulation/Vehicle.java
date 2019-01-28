@@ -223,7 +223,7 @@ public class Vehicle {
 			throw new IllegalArgumentException("Noe er galt");
 		}
 	}
-	
+	@Override
 	public String toString(){
 		return "Vehicle type: " + vehicleType + ", Fueltype: " + fuelType + ", Registrationnumber: " + registrationNumber;
 	}
@@ -250,9 +250,11 @@ public class Vehicle {
 
 
 	public static void main(String[] args) {
-		Vehicle v1 = new Vehicle('C', 'E', "EL21456");
+		Vehicle v1 = new Vehicle('C', 'G', "SV21456");
 		Vehicle v2 = new Vehicle('M', 'E', "EL2146");
 		System.out.println(v1);
+		v2.setRegistrationNumber("EK1564");
+		System.out.println(v2);		
 	}
 
 }

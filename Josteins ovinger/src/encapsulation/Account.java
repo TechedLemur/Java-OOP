@@ -5,13 +5,11 @@ public class Account {
 	private double interestRate;
 	
 	public Account(double balance, double interestRate) {
-		if (balance < 0 || interestRate < 0) {
+		if (balance < 0 || interestRate < 0) 
 			throw new IllegalArgumentException("Kan ikke ha negative verdier");
-		}
-		else {
-			this.balance = balance;
-			this.interestRate = interestRate;
-		}
+
+		this.balance = balance;
+		this.interestRate = interestRate;
 	}
 	
 	public void deposit(double cash) {
