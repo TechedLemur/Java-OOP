@@ -18,6 +18,8 @@ public class CardContainerIterator implements Iterator<Card>{
 
 	@Override
 	public Card next() {
+		if(!this.hasNext())
+			return null;
 		index++;
 		return container.getCard(index);
 	}

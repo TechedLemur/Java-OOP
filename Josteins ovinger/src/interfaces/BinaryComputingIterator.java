@@ -38,7 +38,8 @@ public class BinaryComputingIterator implements Iterator<Double> {
 
 	@Override
 	public Double next() {
-		
+		if (!this.hasNext())
+			return null;
 
 		if (!iterator2.hasNext() && default2 != null){
 			return operator.apply(iterator1.next(), default2);
