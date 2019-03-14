@@ -18,8 +18,13 @@ public class HighscoreListProgram implements HighscoreListListener{
 		String next = in.nextLine();
 		
 		while (!next.equals("stop")) {
-			this.highscoreList.addResult(Integer.parseInt(next));
-			System.out.println("Type next entry:");
+			try {
+				this.highscoreList.addResult(Integer.parseInt(next));
+				System.out.println("Type next entry:");
+				}
+				catch (Exception e) {
+					System.out.println("vennligst skriv et tall:");
+				}
 			next = in.nextLine();
 		}
 		
