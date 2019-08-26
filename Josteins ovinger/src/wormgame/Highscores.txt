@@ -1,0 +1,8 @@
+14000:Lars
+132:Elon
+65:Musk
+61:Jostein
+19:Thomas
+12:Shrek
+11:Andreas, Jostein
+9:Thomas
