@@ -1,6 +1,7 @@
 package wormgame;
+//This requires importing javafx which can be done with Maven in the pom.xml file
 
-
+//Some files are not included in the project because of copyright reasons. Feel free to use your own media.
 
 import java.io.File;
 import java.util.TreeMap;

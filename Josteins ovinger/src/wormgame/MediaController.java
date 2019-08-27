@@ -1,5 +1,6 @@
 package wormgame;
 
+// This requires importing javafx which can be done with Maven in the pom.xml file
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
