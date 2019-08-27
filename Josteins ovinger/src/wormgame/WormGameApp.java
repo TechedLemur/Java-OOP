@@ -1,5 +1,5 @@
 package wormgame;
-
+//This requires importing javafx which can be done with Maven in the pom.xml file
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
